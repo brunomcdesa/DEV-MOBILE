@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Pagina JS</title>
+        <script>
+            console.log('Escrito em JS');
+
+            var varGLOBAL = 'Teste de variavel STRING';
+            console.log(varGLOBAL);
+            console.log(typeof varGLOBAL);
+
+            let varLocal = 123;
+            console.log(varLocal);
+            console.log(typeof varLocal);
+
+            varLocal += 'a';
+            console.log(varLocal);
+            console.log(typeof varLocal);
+
+            varLocal = 15;
+            if(varLocal >= 14){
+                console.log('É maior');
+            }else{
+                console.log('É menor');
+            };
+
+            varLocal = 15;
+            if( !(varLocal <= 14) ){
+                console.log('É maior');
+            }else{
+                console.log('É menor');
+            };
+
+         </script>
+    </head>
+    <body>
+        <h1>HELLO WORLD!</h1>
+        <div id="container"></div>
+        <h3 class="titulo3">3º titulo</h3>
+        
+        
+        <script>
+            let elemento1 = document.getElementById("container");
+            console.log(elemento1);
+
+            let elemento2 = document.getElementsByClassName("titulo3");
+            console.log(elemento2[0]);
+
+            let elemento3 = document.querySelector("#container");
+            console.log(elemento3);
+
+            let elemento4 = document.querySelector(".titulo3");
+            console.log(elemento4);
+
+            //elemento4.innerHTML = "adicionado no JS";
+            elemento4.innerHTML += " - adicionado no JS";
+
+            //window.print();
+            document.write("<h1>Escrito em JS</h1>");
+
+
+            let variavelString = "Esse é um exemplo de string";
+            console.log(typeof variavelString);
+            console.log(variavelString);
+
+            let n = variavelString.indexOf('N');
+            console.log("Posicao = " + n);
+            console.log(variavelString[26]);
+            let letra = variavelString.charAt(21);
+            console.log("Letra = " + letra);
+
+            variavelString = variavelString.replace("exemplo", "modelo");
+            console.log(variavelString);
+            
+            variavelString = variavelString.replace(variavelString.charAt(0), 'A');
+            console.log(variavelString);
+
+            //variavelString = variavelString.toUpperCase();
+            //console.log(variavelString);
+
+            let letraMaiuscula = variavelString.charAt(21).toUpperCase();
+            console.log(letraMaiuscula);
+            variavelString = variavelString.replace(variavelString.charAt(21), letraMaiuscula);
+            console.log(variavelString);
+
+            variavelString += "      ";
+            variavelString = variavelString.trim();
+            console.log("Tamanho: " + variavelString.length);
+
+        </script>
+    </body>
+</html>
